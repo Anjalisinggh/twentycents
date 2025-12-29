@@ -1,10 +1,10 @@
 export default function PartnersSection() {
   return (
-    <section className="bg-black text-white py-16 sm:py-24 md:py-32 px-4 sm:px-6 md:px-12 lg:px-24">
+    <section className="bg-black text-white py-8 sm:py-16 md:py-24 lg:py-32 px-4 sm:px-6 md:px-12 lg:px-24">
       <div className="max-w-6xl mx-auto">
         
         {/* Header Section */}
-        <div className="text-center mb-12 sm:mb-16 md:mb-24">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16 lg:mb-24">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 tracking-widest">
             導入効果
           </h2>
@@ -15,7 +15,7 @@ export default function PartnersSection() {
         </div>
 
         {/* Content Section */}
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 sm:gap-16 md:gap-20">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 sm:gap-12 md:gap-16 lg:gap-20">
           
           {/* Left: Venn Diagram */}
           <div className="relative flex items-center justify-center w-full max-w-[520px]">

@@ -11,9 +11,9 @@ export default function ClientsSection() {
   ];
 
   return (
-    <section className="py-16 sm:py-24 md:py-32 bg-black text-center">
+    <section className="py-8 sm:py-16 md:py-24 lg:py-32 bg-black text-center">
       {/* Section Header */}
-      <div className="mb-12 sm:mb-16 md:mb-20 px-4">
+      <div className="mb-8 sm:mb-12 md:mb-16 lg:mb-20 px-4">
         <h2 className="text-white text-xl sm:text-2xl md:text-3xl font-bold tracking-widest mb-3 sm:mb-4">
           ショートPR 広告 一覧
         </h2>

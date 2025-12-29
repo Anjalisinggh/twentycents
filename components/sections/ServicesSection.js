@@ -1,9 +1,9 @@
 export default function ServiceLineup() {
     return (
-      <section className="bg-black py-16 sm:py-24 md:py-32 px-4 sm:px-6">
+      <section className="bg-black py-8 sm:py-16 md:py-24 lg:py-32 px-4 sm:px-6">
         <div className="max-w-[1558px] mx-auto">
           {/* --- Title Section --- */}
-          <div className="flex flex-col items-center mb-12 sm:mb-16 md:mb-20">
+          <div className="flex flex-col items-center mb-8 sm:mb-12 md:mb-16 lg:mb-20">
             <h2 className="text-xl sm:text-2xl md:text-3xl font-normal text-white mb-2 tracking-wider">
               サービスラインナップ
             </h2>
@@ -11,7 +11,7 @@ export default function ServiceLineup() {
           </div>
   
           {/* --- Service Cards Grid --- */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16 md:mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12 md:mb-16 lg:mb-20">
             {/* Japan-Focused Column */}
             <div className="relative bg-[#111111] p-6 sm:p-8 md:p-10 lg:p-12 rounded-sm">
             <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 via-green-500 to-yellow-400"></div>

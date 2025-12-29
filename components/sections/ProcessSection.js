@@ -23,11 +23,11 @@ export default function ProcessSection() {
     ];
   
     return (
-      <section className="bg-black text-white py-16 sm:py-24 md:py-32 px-4 sm:px-6">
+      <section className="bg-black text-white py-8 sm:py-16 md:py-24 lg:py-32 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           
           {/* Header */}
-          <div className="text-center mb-12 sm:mb-16 md:mb-24">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16 lg:mb-24">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-widest mb-3">
               導入の流れ
             </h2>
@@ -35,7 +35,7 @@ export default function ProcessSection() {
           </div>
   
           {/* Steps Grid */}
-          <div className="relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12 md:gap-16 mb-16 sm:mb-24 md:mb-32">
+          <div className="relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-12 lg:gap-16 mb-8 sm:mb-16 md:mb-24 lg:mb-32">
             {/* Connecting Dashed Line (Desktop Only) */}
             <div className="hidden md:block absolute top-7 left-0 w-full h-[1px] border-t border-dashed border-gray-600 -z-0"></div>
   
@@ -60,7 +60,7 @@ export default function ProcessSection() {
           {/* Client Logos Section */}
           <div >
             {/* Title with Vertical Separator - Centered */}
-            <div className="flex items-center justify-start gap-3 sm:gap-4 mb-8 sm:mb-10 md:mb-12">
+            <div className="flex items-center justify-start gap-3 sm:gap-4 mb-6 sm:mb-8 md:mb-10 lg:mb-12">
               <h3 className="text-xs sm:text-sm font-bold tracking-[0.2em] sm:tracking-[0.3em] md:tracking-[0.35em] whitespace-nowrap">
                 主要取引先
               </h3>
@@ -68,7 +68,7 @@ export default function ProcessSection() {
             </div>
 
             {/* Logos in Two Rows */}
-            <div className="flex flex-col gap-6 sm:gap-8 md:gap-10 mb-12 sm:mb-16 md:mb-20">
+            <div className="flex flex-col gap-4 sm:gap-6 md:gap-8 lg:gap-10 mb-8 sm:mb-12 md:mb-16 lg:mb-20">
               {/* First Row */}
               <div className="flex flex-wrap justify-center items-center gap-x-6 sm:gap-x-8 md:gap-x-12 gap-y-4 sm:gap-y-5 md:gap-y-6 opacity-80 grayscale brightness-0 invert">
                 <img src="/logos/avex.png" alt="avex" className="h-4 sm:h-5 md:h-6 w-auto" />
@@ -89,7 +89,7 @@ export default function ProcessSection() {
           </div>
   
           {/* CTA Button */}
-          <div className="mt-12 sm:mt-16 md:mt-24 text-center px-4">
+          <div className="mt-8 sm:mt-12 md:mt-16 lg:mt-24 text-center px-4">
             <button className="bg-[#222] hover:bg-[#333] text-white px-6 sm:px-8 md:px-10 lg:px-16 py-3 sm:py-4 md:py-5 rounded-full text-xs md:text-sm font-bold tracking-[0.2em] sm:tracking-[0.3em] md:tracking-[0.35em] transition-all inline-flex items-center justify-center w-full sm:w-auto sm:min-w-[260px]">
               お問い合わせはこちらまで
             </button>

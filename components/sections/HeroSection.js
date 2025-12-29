@@ -16,17 +16,15 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="bg-black min-h-screen flex flex-col items-center justify-start pt-5 px-4 sm:px-6">
+    <section className="bg-black w-full flex flex-col items-center pt-5 pb-12 px-4 sm:px-6">
       
-      {/* Top Left Standalone Logo - Matching reference exactly */}
+      {/* Top Left Standalone Logo */}
       <div className="w-full max-w-[1558px] mb-5 pl-4 sm:pl-6 md:pl-10 flex justify-start">
-         <img src="/logo2.png" alt="Twe Cen" className="h-10 sm:h-12 md:h-14 w-auto object-contain" />
+         <img src="/logo2.png" alt="Logo" className="h-10 sm:h-12 md:h-14 w-auto object-contain" />
       </div>
 
-      {/* Cinematic Visual Container: Set to exactly your requested dimensions */}
+      {/* Cinematic Visual Container */}
       <div className="relative w-full max-w-[1558px] h-[250px] sm:h-[300px] md:h-[496px] overflow-hidden rounded-[2px] shadow-2xl">
-        
-        {/* Background Image with requested scale animation */}
         <motion.div 
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
@@ -34,28 +32,18 @@ export default function HeroSection() {
           className="absolute inset-0 bg-cover bg-center" 
           style={{ backgroundImage: `url('/bg.png')`}}
         />
-        
-        {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/35" />
 
-        {/* --- UI Content Overlay --- */}
         <div className="absolute inset-0 flex flex-col md:flex-row items-center justify-center px-4 sm:px-6 md:px-16 gap-6 sm:gap-8 md:gap-14">
-          
-          {/* Twenty Cents Logo Side */}
           <motion.div 
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="flex flex-col items-center"
           >
-             <img 
-               src="/twentylogo.png" 
-               alt="Twenty Cents" 
-               className="w-[180px] sm:w-[240px] md:w-[280px] lg:w-[420px] h-auto object-contain"
-             />
+             <img src="/twentylogo.png" alt="Twenty Cents" className="w-[180px] sm:w-[240px] md:w-[280px] lg:w-[420px] h-auto object-contain" />
           </motion.div>
 
-          {/* White Vertical Divider (Hidden on small screens) */}
           <motion.div 
             initial={{ scaleY: 0 }}
             animate={{ scaleY: 1 }}
@@ -63,7 +51,6 @@ export default function HeroSection() {
             className="hidden md:block w-[1.5px] h-32 bg-white/40 origin-center" 
           />
 
-          {/* Catchphrase Side */}
           <motion.div 
             initial={{ opacity: 0, x: 25 }}
             animate={{ opacity: 1, x: 0 }}
@@ -81,20 +68,19 @@ export default function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.8 }}
-        className="w-full max-w-[1558px] mt-12 sm:mt-16 md:mt-24 mb-8 sm:mb-10"
+        className="w-full max-w-[1558px] mt-12 md:mt-16 lg:mt-20"
       >
-        <div className="flex flex-wrap items-center justify-center md:justify-between gap-x-4 sm:gap-x-6 md:gap-x-8 gap-y-4 sm:gap-y-6 md:gap-y-8 px-2 opacity-80 grayscale contrast-150">
+        <div className="flex flex-wrap items-center justify-center md:justify-between gap-x-6 gap-y-6 px-2 opacity-80 grayscale contrast-150">
           {partners.map((partner, index) => (
             <img 
               key={index}
               src={partner.src} 
               alt={partner.name}
-              className="h-3 sm:h-4 md:h-6 w-auto object-contain transition-all duration-300 hover:grayscale-0 hover:opacity-100 cursor-pointer"
+              className="h-3 sm:h-4 md:h-6 w-auto object-contain hover:grayscale-0 transition-all cursor-pointer"
             />
           ))}
         </div>
       </motion.div>
-
     </section>
   );
 }
