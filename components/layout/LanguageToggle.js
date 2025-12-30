@@ -15,14 +15,14 @@ export default function LanguageToggle() {
     router.push('/en');
    }
   };
-  console.log(locale);
+  console.log(locale, router, pathname);
   console.log(locale == 'ja', locale == 'en');
   return (
     <div className="flex items-center gap-2">
       <button
         onClick={() => switchLanguage('ja')}
         className={`px-3 py-1.5 text-sm font-medium transition-all rounded ${
-          locale == 'ja'
+            pathname == '/ja'
             ? 'bg-white text-black'
             : 'bg-white/10 text-white hover:bg-white/20'
         }`}
@@ -32,7 +32,7 @@ export default function LanguageToggle() {
       <button
         onClick={() => switchLanguage('en')}
         className={`px-3 py-1.5 text-sm font-medium transition-all rounded ${
-          locale == 'en'
+            pathname == '/en'
             ? 'bg-white text-black'
             : 'bg-white/10 text-white hover:bg-white/20'
         }`}
