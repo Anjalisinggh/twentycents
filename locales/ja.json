@@ -1,0 +1,159 @@
+{
+  "hero": {
+    "taglineLine1": "統合クリエイティブで、",
+    "taglineLine2": "ビジネスを加速させる。"
+  },
+  "features": {
+    "heading": {
+      "line1": "CRAZY ANGLE",
+      "line2": "PROFESSIONAL",
+      "line3": "QUALITY"
+    },
+    "subtitle": "常識の外から創る、クリエイティブの物語。",
+    "description": {
+      "p1": "映像・デザイン・システム開発をワンストップで統合し最大限のマーケティングを。",
+      "p2": "東京・パリ・ムンバイから24時間のグローバル制作体制で、企業の世界観を一貫したストーリーを構築する。",
+      "p3": "単なる再生数ではなく、視聴者をあなたのビジネスへ導く導線設計が、20CENTのSNSマーケティングの本質だ。"
+    }
+  },
+  "shorts": {
+    "title": "特徴",
+    "features": {
+      "oneStop": {
+        "title": "ワンストップ体制",
+        "subtitle": "映像・デザイン・開発を、一つの物語として統合。",
+        "desc": "映像・デザイン・開発を一つのラインでMV・CM・ショートドラマからUI/UX・システム開発まで一貫対応。世界観がブレない、統合クリエイティブを実現。"
+      },
+      "creators": {
+        "title": "世界水準のクリエイター",
+        "subtitle": "ILM / DNEG 出身メンバーによるハイエンド品質。",
+        "desc": "ILM / DNEG / Wetaなどで経験を積んだメンバーが集結。VFXからSNSアドまで、最高峰の品質を。"
+      },
+      "followTheSun": {
+        "title": "Follow-the-Sun 体制",
+        "subtitle": "東京・パリ・ムンバイが連動する、24時間稼働体制",
+        "desc": "東京・パリ・インドの3拠点が連動し、時差を活かした24時間稼働フローを。制作スピードの向上。世界をまたぐ、クリエイティブを実現。"
+      },
+      "aiHuman": {
+        "title": "AI × Human の最適分業",
+        "subtitle": "人間の創造力とAIの生産性を、最高効率で融合。",
+        "desc": "企画・演出など創造領域は人が、素材生成や差分出しなど大量処理はAIが担当。コストを抑えつつ、制作速度と品質の双方を高める。"
+      }
+    }
+  },
+  "clients": {
+    "title": "ショートPR広告一覧"
+  },
+  "services": {
+    "title": "サービスラインナップ",
+    "japanFocused": {
+      "title": "Japan-Focused",
+      "subtitle": "国内向けサービス",
+      "hollywood": {
+        "name": "Hollywood Creative Partner",
+        "tagline": "企業の\"外部クリエイティブ部署\"に。",
+        "description": "映像関連の単発案件をまとめて扱う専用パートナー枠。1人月30万円〜で、企画・撮影・編集・納品まで柔軟にアサイン可能。"
+      },
+      "prShort": {
+        "name": "企業向けショートPR 広告",
+        "tagline": "ショートドラマで、企業の世界観を\"連続コンテンツ化\"する。",
+        "description": "企業ブランドに基づいたショートドラマを毎月数本〜定期制作。ストーリー設計・脚本・キャスティング・撮影・編集まで一気通貫。"
+      }
+    },
+    "internationalFocused": {
+      "title": "International-Focused",
+      "subtitle": "国内外向けサービス",
+      "localization": {
+        "name": "Localization Suite",
+        "tagline": "海外サービスを、「日本でちゃんと売れる」状態にする。",
+        "description": "翻訳にとどまらない、文化・UX・マーケ・規制まで含む総合ローカライズ。日本市場向けのUI/UX再設計、コピー制作、LP・動画制作にも対応。"
+      },
+      "cheabook": {
+        "name": "CheaBook",
+        "tagline": "新卒・多国籍社員のオンボーディングを、ゲームのように楽しく。",
+        "description": "ゲーミフィケーション教材とミッションで業務知識・文化理解を効率学習。外国人向け／日本人新入社員向けの両方に対応。"
+      }
+    },
+    "creativePartners": {
+      "title": "Creative Partners",
+      "subtitle": "クリエイティブパートナー",
+      "bixel": {
+        "name": "Contents Marketing",
+        "tagline": "YouTube / TikTok で、「好き」と「信頼」を積み上げる。",
+        "description": "企業公式YouTube・TikTokなどSNSコンテンツの制作〜運用代行。企画・台本・撮影・編集・サムネ・分析までワンストップ。",
+        "tags": ["SNS マーケティング", "企画", "撮影", "編集"]
+      },
+      "twentyCents": {
+        "name": "Creative Design",
+        "tagline": "クリエイティブを\"統合的に設計\"するサービス。",
+        "description": "映像制作、ブランドデザイン、UI/UX、アプリ開発まで、クリエイティブからテクノロジーまでフルスタックで提供。",
+        "tags": ["Dev 開発", "CG, VFX", "ブロックチェーン", "AI"]
+      }
+    }
+  },
+  "partners": {
+    "title": "導入効果",
+    "subtitle": "AI × Human で最適化された \"統合クリエイティブスタジオ\"",
+    "heading": "創造に集中し、\n無駄を削ぎ落とす独自ワークフロー。",
+    "aiOptimization": "AI活用\nによる最適化",
+    "humanCreative": "人が担う\nクリエイティブ",
+    "description": {
+      "p1": "AIで省力化できる領域と、人が担うべき創造領域を明確に線引きする独自ルールを採用。",
+      "p2": "反復作業や差分生成などはAIが高速処理し、企画・演出・デザインなど本質的な判断は人が担当。",
+      "p3": "無駄な作業を徹底的に削減しながら、お客様の目的に最適化された高品質なクリエイティブを実現。"
+    }
+  },
+  "process": {
+    "title": "導入の流れ",
+    "steps": {
+      "step1": {
+        "title": "お問い合わせ",
+        "desc": "サイトのお問い合わせフォーム、またはメール、電話でお気軽にご連絡ください。"
+      },
+      "step2": {
+        "title": "お見積り",
+        "desc": "お客様のご要望を詳細にお聞きした上で、最適なサービスプランとお見積りをご提案します。"
+      },
+      "step3": {
+        "title": "簡易デモ",
+        "desc": "お客様のご要望をもとに、簡易デモ・絵コンテ・ストーリーボードなどの試作を一度制作し、次のステップをご提案します。"
+      },
+      "step4": {
+        "title": "サービス開始",
+        "desc": "専門チームがお客様のプロジェクトを担当し、最高品質のサービスを提供いたします。"
+      }
+    },
+    "mainClients": "主要取引先",
+    "cta": "お問い合わせはこちらまで"
+  },
+  "footer": {
+    "links": {
+      "company": "会社概要",
+      "privacy": "プライバシーポリシー",
+      "terms": "利用規約",
+      "copyright": "著作権および免責事項",
+      "commerce": "特定商取引法に基づく表示"
+    }
+  },
+  "contact": {
+    "title": "お問い合わせ",
+    "description": "制作・開発のご相談やお仕事の依頼は、\nこちらまでお願いいたします。",
+    "form": {
+      "name": "名前",
+      "email": "メールアドレス",
+      "subject": "件名",
+      "message": "本文",
+      "submit": "送信",
+      "submitting": "送信中...",
+      "success": "メッセージが正常に送信されました。"
+    },
+    "validation": {
+      "nameRequired": "名前は必須です",
+      "emailRequired": "メールアドレスは必須です",
+      "emailInvalid": "有効なアドレスを入力してください",
+      "subjectRequired": "件名は必須です",
+      "messageRequired": "本文は必須です"
+    }
+  }
+}
+

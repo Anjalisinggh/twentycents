@@ -1,30 +1,32 @@
 "use client";
 import React from 'react';
-
-const features = [
-  {
-    title: "ワンストップ体制",
-    subtitle: "映像・デザイン・開発を、一つの物語として統合。",
-    desc: "映像・デザイン・開発を一つのラインでMV・CM・ショートドラマからUI/UX・システム開発まで一貫対応。世界観がブレない、統合クリエイティブを実現。"
-  },
-  {
-    title: "世界水準のクリエイター",
-    subtitle: "ILM / DNEG 出身メンバーによるハイエンド品質。",
-    desc: "ILM / DNEG / Wetaなどで経験を積んだメンバーが集結。VFXからSNSアドまで、最高峰の品質を。"
-  },
-  {
-    title: "Follow-the-Sun 体制",
-    subtitle: "東京・パリ・ムンバイが連動する、24時間稼働体制",
-    desc: "東京・パリ・インドの3拠点が連動し、時差を活かした24時間稼働フローを。制作スピードの向上。世界をまたぐ、クリエイティブを実現。"
-  },
-  {
-    title: "AI × Human の最適分業",
-    subtitle: "人間の創造力とAIの生産性を、最高効率で融合。",
-    desc: "企画・演出など創造領域は人が、素材生成や差分出しなど大量処理はAIが担当。コストを抑えつつ、制作速度と品質の双方を高める。"
-  }
-];
+import { useTranslations } from 'next-intl';
 
 export default function ShortsSection() {
+  const t = useTranslations('shorts');
+  
+  const features = [
+    {
+      title: t('features.oneStop.title'),
+      subtitle: t('features.oneStop.subtitle'),
+      desc: t('features.oneStop.desc')
+    },
+    {
+      title: t('features.creators.title'),
+      subtitle: t('features.creators.subtitle'),
+      desc: t('features.creators.desc')
+    },
+    {
+      title: t('features.followTheSun.title'),
+      subtitle: t('features.followTheSun.subtitle'),
+      desc: t('features.followTheSun.desc')
+    },
+    {
+      title: t('features.aiHuman.title'),
+      subtitle: t('features.aiHuman.subtitle'),
+      desc: t('features.aiHuman.desc')
+    }
+  ];
   return (
     <section className="bg-black pt-16 pb-6 px-4 sm:px-10 overflow-hidden">
       <div className="max-w-[1558px] mx-auto">
@@ -32,7 +34,7 @@ export default function ShortsSection() {
         {/* Section Header: Bridge between text and grid */}
         <div className="flex flex-col items-center mb-10">
           <h4 className="text-white text-2xl md:text-3xl font-bold tracking-[0.3em]">
-            特徴
+            {t('title')}
           </h4>
           <div className="w-5 h-[1px] bg-white mt-4 opacity-100"></div>
         </div>

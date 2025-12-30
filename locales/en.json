@@ -1,0 +1,159 @@
+{
+  "hero": {
+    "taglineLine1": "Accelerate your business",
+    "taglineLine2": "with integrated creative solutions."
+  },
+  "features": {
+    "heading": {
+      "line1": "CRAZY ANGLE",
+      "line2": "PROFESSIONAL",
+      "line3": "QUALITY"
+    },
+    "subtitle": "A creative story created outside the box.",
+    "description": {
+      "p1": "Integrate video, design, and system development in one-stop for maximum marketing impact.",
+      "p2": "Build consistent stories for your company's worldview with a 24-hour global production system from Tokyo, Paris, and Mumbai.",
+      "p3": "The essence of 20CENT's SNS marketing is not just views, but designing pathways that guide viewers to your business."
+    }
+  },
+  "shorts": {
+    "title": "Features",
+    "features": {
+      "oneStop": {
+        "title": "One-Stop System",
+        "subtitle": "Integrate video, design, and development as one story.",
+        "desc": "End-to-end support from MV, CM, and short dramas to UI/UX and system development in one line. Achieve integrated creative that maintains a consistent worldview."
+      },
+      "creators": {
+        "title": "World-Class Creators",
+        "subtitle": "High-end quality by members from ILM / DNEG.",
+        "desc": "Members who have gained experience at ILM / DNEG / Weta have gathered. From VFX to SNS ads, we deliver the highest quality."
+      },
+      "followTheSun": {
+        "title": "Follow-the-Sun System",
+        "subtitle": "A 24-hour operation system linking Tokyo, Paris, and Mumbai",
+        "desc": "Three bases in Tokyo, Paris, and India work together to create a 24-hour workflow that takes advantage of time differences. Improve production speed. Realize creative work that spans the world."
+      },
+      "aiHuman": {
+        "title": "Optimal Division of AI × Human",
+        "subtitle": "Fuse human creativity and AI productivity with maximum efficiency.",
+        "desc": "People handle creative areas such as planning and direction, while AI handles material generation and batch processing. Reduce costs while improving both production speed and quality."
+      }
+    }
+  },
+  "clients": {
+    "title": "Short PR Ads List"
+  },
+  "services": {
+    "title": "Service Lineup",
+    "japanFocused": {
+      "title": "Japan-Focused",
+      "subtitle": "Domestic services",
+      "hollywood": {
+        "name": "Hollywood Creative Partner",
+        "tagline": "Your company's \"external creative department\".",
+        "description": "A dedicated partner framework that handles video-related individual projects together. From 300,000 yen per person per month, flexible assignment from planning, shooting, editing to delivery."
+      },
+      "prShort": {
+        "name": "Corporate Short PR Ads",
+        "tagline": "Turn your company's worldview into \"serialized content\" with short dramas.",
+        "description": "Produce several short dramas per month based on your corporate brand on a regular basis. End-to-end from story design, script, casting, shooting to editing."
+      }
+    },
+    "internationalFocused": {
+      "title": "International-Focused",
+      "subtitle": "Domestic and international services",
+      "localization": {
+        "name": "Localization Suite",
+        "tagline": "Make overseas services \"sellable in Japan\".",
+        "description": "Comprehensive localization that goes beyond translation, including culture, UX, marketing, and regulations. Also handles UI/UX redesign, copywriting, LP and video production for the Japanese market."
+      },
+      "cheabook": {
+        "name": "CheaBook",
+        "tagline": "Make onboarding for new graduates and multinational employees fun like a game.",
+        "description": "Efficiently learn business knowledge and cultural understanding through gamification materials and missions. Supports both foreign employees and Japanese new employees."
+      }
+    },
+    "creativePartners": {
+      "title": "Creative Partners",
+      "subtitle": "Creative Partners",
+      "bixel": {
+        "name": "Contents Marketing",
+        "tagline": "Build \"likes\" and \"trust\" on YouTube / TikTok.",
+        "description": "Production to operation of SNS content such as corporate official YouTube and TikTok. One-stop from planning, script, shooting, editing, thumbnails to analysis.",
+        "tags": ["SNS Marketing", "Planning", "Shooting", "Editing"]
+      },
+      "twentyCents": {
+        "name": "Creative Design",
+        "tagline": "A service that \"integratively designs\" creative work.",
+        "description": "Full-stack provision from creative to technology, including video production, brand design, UI/UX, and app development.",
+        "tags": ["Dev Development", "CG, VFX", "Blockchain", "AI"]
+      }
+    }
+  },
+  "partners": {
+    "title": "Implementation Effects",
+    "subtitle": "An \"Integrated Creative Studio\" optimized with AI × Human",
+    "heading": "A unique workflow that focuses on creation\nand eliminates waste.",
+    "aiOptimization": "Optimization through\nAI utilization",
+    "humanCreative": "Creative work\nhandled by people",
+    "description": {
+      "p1": "We adopt unique rules that clearly distinguish between areas that can be streamlined with AI and creative areas that should be handled by people.",
+      "p2": "AI handles repetitive tasks and differential generation at high speed, while people handle essential judgments such as planning, direction, and design.",
+      "p3": "While thoroughly eliminating wasteful work, we realize high-quality creative work optimized for your objectives."
+    }
+  },
+  "process": {
+    "title": "Implementation Process",
+    "steps": {
+      "step1": {
+        "title": "Inquiry",
+        "desc": "Please feel free to contact us via the contact form on the website, email, or phone."
+      },
+      "step2": {
+        "title": "Quote",
+        "desc": "After listening to your requirements in detail, we will propose the optimal service plan and quote."
+      },
+      "step3": {
+        "title": "Simple Demo",
+        "desc": "Based on your requirements, we will create a prototype such as a simple demo, storyboard, or storyboard once, and propose the next step."
+      },
+      "step4": {
+        "title": "Service Start",
+        "desc": "A specialized team will handle your project and provide the highest quality service."
+      }
+    },
+    "mainClients": "Main Clients",
+    "cta": "Contact Us Here"
+  },
+  "footer": {
+    "links": {
+      "company": "Company Overview",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "copyright": "Copyright and Disclaimer",
+      "commerce": "Specified Commercial Transactions Act"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "For consultations on production/development or work requests,\nplease contact us here.",
+    "form": {
+      "name": "Name",
+      "email": "Email Address",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send",
+      "submitting": "Sending...",
+      "success": "Message sent successfully."
+    },
+    "validation": {
+      "nameRequired": "Name is required",
+      "emailRequired": "Email address is required",
+      "emailInvalid": "Please enter a valid email address",
+      "subjectRequired": "Subject is required",
+      "messageRequired": "Message is required"
+    }
+  }
+}
+

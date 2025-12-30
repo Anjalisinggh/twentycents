@@ -1,8 +1,11 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
+import LanguageToggle from '@/components/layout/LanguageToggle';
 
 export default function HeroSection() {
+  const t = useTranslations('hero');
   const partners = [
     { name: 'avex', src: '/logos/avex.png' },
     { name: 'Samurai Partners', src: '/logos/samurai.png' },
@@ -19,8 +22,9 @@ export default function HeroSection() {
     <section className="bg-black w-full flex flex-col items-end pt-10 pb-6">
       
       {/* Top Left Standalone Logo */}
-      <div className="w-full max-w-[1558px] mb-5 pl-4 sm:pl-6 md:pl-10 flex justify-start">
+      <div className="w-full max-w-[1558px] mb-5 pl-4 sm:pl-6 md:pl-10 pr-4 sm:pr-6 md:pr-10 flex justify-between items-center">
          <img src="/logo2.png" alt="Logo" className="h-15 sm:h-17 md:h-19 w-auto object-contain" />
+         <LanguageToggle />
       </div>
 
       {/* Cinematic Visual Container */}
@@ -49,8 +53,8 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-white text-base sm:text-lg md:text-xl lg:text-[30px] font-bold leading-[1.6] tracking-[0.08em] text-center md:text-left"
           >
-            <p className="whitespace-nowrap">統合クリエイティブで、</p>
-            <p className="whitespace-nowrap">ビジネスを加速させる。</p>
+            <p className="whitespace-nowrap">{t('taglineLine1')}</p>
+            <p className="whitespace-nowrap">{t('taglineLine2')}</p>
           </motion.div>
         </div>
       </div>
@@ -97,11 +101,11 @@ export default function HeroSection() {
               />
             ))}
             {/* Duplicate set for seamless loop */}
-            {partners.map((partner, index) => (
-              <img 
+          {partners.map((partner, index) => (
+            <img 
                 key={`second-${index}`}
-                src={partner.src} 
-                alt={partner.name}
+              src={partner.src} 
+              alt={partner.name}
                 className={`
                   ${partner.name === 'Hakuhodo' 
                     ? 'h-4 sm:h-5 md:h-7 lg:h-8' 
@@ -109,8 +113,8 @@ export default function HeroSection() {
                   } 
                   w-auto object-contain hover:grayscale-0 transition-all cursor-pointer flex-shrink-0
                 `}
-              />
-            ))}
+            />
+          ))}
           </div>
         </div>
       </motion.div>

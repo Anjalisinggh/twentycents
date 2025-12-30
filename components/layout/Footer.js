@@ -1,7 +1,10 @@
+"use client";
 import { Instagram, Twitter, Youtube } from 'lucide-react'; 
 import { FaTiktok } from 'react-icons/fa';
+import { useTranslations } from 'next-intl';
 
 export default function Footer() {
+  const t = useTranslations('footer');
   const socialLinks = [
     { icon: <Instagram size={24} />, href: "https://www.instagram.com/20cent_studio?igsh=Zms2YW1pdHg2dnln&utm_source=qr" },
     { icon: <Twitter size={24} />, href: "https://x.com/20cent_studio" },
@@ -32,11 +35,11 @@ export default function Footer() {
 
           {/* Legal Links */}
           <nav className="flex flex-col gap-7 text-xs text-#C3C3C3 font-light">
-            <a href="#" className="hover:text-white transition-colors w-fit">会社概要</a>
-            <a href="#" className="hover:text-white transition-colors w-fit">プライバシーポリシー</a>
-            <a href="#" className="hover:text-white transition-colors w-fit">利用規約</a>
-            <a href="#" className="hover:text-white transition-colors w-fit">著作権および免責事項</a>
-            <a href="#" className="hover:text-white transition-colors w-fit">特定商取引法に基づく表示</a>
+            <a href="#" className="hover:text-white transition-colors w-fit">{t('links.company')}</a>
+            <a href="#" className="hover:text-white transition-colors w-fit">{t('links.privacy')}</a>
+            <a href="#" className="hover:text-white transition-colors w-fit">{t('links.terms')}</a>
+            <a href="#" className="hover:text-white transition-colors w-fit">{t('links.copyright')}</a>
+            <a href="#" className="hover:text-white transition-colors w-fit">{t('links.commerce')}</a>
           </nav>
         </div>
 

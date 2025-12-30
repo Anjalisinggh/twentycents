@@ -1,7 +1,9 @@
 "use client";
 import React, { useState } from 'react';
+import { useTranslations } from 'next-intl';
 
 export default function ContactPage() {
+  const t = useTranslations('contact');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -19,14 +21,14 @@ export default function ContactPage() {
 
   const validateForm = () => {
     const newErrors = {};
-    if (!formData.name.trim()) newErrors.name = '名前は必須です';
+    if (!formData.name.trim()) newErrors.name = t('validation.nameRequired');
     if (!formData.email.trim()) {
-      newErrors.email = 'メールアドレスは必須です';
+      newErrors.email = t('validation.emailRequired');
     } else if (!validateEmail(formData.email)) {
-      newErrors.email = '有効なアドレスを入力してください';
+      newErrors.email = t('validation.emailInvalid');
     }
-    if (!formData.subject.trim()) newErrors.subject = '件名は必須です';
-    if (!formData.message.trim()) newErrors.message = '本文は必須です';
+    if (!formData.subject.trim()) newErrors.subject = t('validation.subjectRequired');
+    if (!formData.message.trim()) newErrors.message = t('validation.messageRequired');
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -72,10 +74,14 @@ export default function ContactPage() {
         {/* Left Column: Contact Info */}
         <div className="flex-1 space-y-8 md:space-y-10">
           <div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">お問い合わせ</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">{t('title')}</h1>
             <p className="text-white text-sm md:text-base leading-relaxed">
-              制作・開発のご相談やお仕事の依頼は、<br />
-              こちらまでお願いいたします。
+              {t('description').split('\n').map((line, i, arr) => (
+                <React.Fragment key={i}>
+                  {line}
+                  {i < arr.length - 1 && <br />}
+                </React.Fragment>
+              ))}
             </p>
           </div>
 
@@ -106,7 +112,7 @@ export default function ContactPage() {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="名前"
+                  placeholder={t('form.name')}
                   className={`w-full bg-black border ${errors.name ? 'border-red-500' : 'border-zinc-800'} rounded-lg px-4 py-4 text-sm focus:outline-none focus:border-zinc-500 transition-colors placeholder-zinc-600`}
                 />
                 <span className="absolute right-4 top-1/2 -translate-y-1/2 text-red-500 text-lg">*</span>
@@ -121,7 +127,7 @@ export default function ContactPage() {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="メールアドレス"
+                  placeholder={t('form.email')}
                   className={`w-full bg-black border ${errors.email ? 'border-red-500' : 'border-zinc-800'} rounded-lg px-4 py-4 text-sm focus:outline-none focus:border-zinc-500 transition-colors placeholder-zinc-600`}
                 />
                 <span className="absolute right-4 top-1/2 -translate-y-1/2 text-red-500 text-lg">*</span>
@@ -136,7 +142,7 @@ export default function ContactPage() {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  placeholder="件名"
+                  placeholder={t('form.subject')}
                   className={`w-full bg-black border ${errors.subject ? 'border-red-500' : 'border-zinc-800'} rounded-lg px-4 py-4 text-sm focus:outline-none focus:border-zinc-500 transition-colors placeholder-zinc-600`}
                 />
                 <span className="absolute right-4 top-1/2 -translate-y-1/2 text-red-500 text-lg">*</span>
@@ -151,7 +157,7 @@ export default function ContactPage() {
                 rows="6"
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="本文"
+                placeholder={t('form.message')}
                 className={`w-full bg-black border ${errors.message ? 'border-red-500' : 'border-zinc-800'} rounded-lg px-4 py-4 text-sm focus:outline-none focus:border-zinc-500 transition-colors placeholder-zinc-600 resize-none`}
               />
               {errors.message && <p className="text-red-500 text-xs">{errors.message}</p>}
@@ -163,13 +169,13 @@ export default function ContactPage() {
               disabled={isSubmitting}
               className="w-full border border-zinc-800 rounded-lg py-4 text-sm font-bold tracking-widest hover:bg-white hover:text-black transition-all duration-300 disabled:opacity-50"
             >
-              {isSubmitting ? '送信中...' : '送信'}
+              {isSubmitting ? t('form.submitting') : t('form.submit')}
             </button>
 
             {/* Success Status */}
             {submitStatus === 'success' && (
               <p className="text-green-400 text-xs text-center mt-2">
-                メッセージが正常に送信されました。
+                {t('form.success')}
               </p>
             )}
           </form>

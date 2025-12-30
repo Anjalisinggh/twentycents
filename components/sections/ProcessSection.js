@@ -1,27 +1,32 @@
 "use client";
+import React from 'react';
 import Link from 'next/link';
+import { useTranslations, useLocale } from 'next-intl';
 
 export default function ProcessSection() {
+  const t = useTranslations('process');
+  const locale = useLocale();
+  
   const steps = [
     {
       id: "01",
-      title: "お問い合わせ",
-      desc: "サイトのお問い合わせフォーム、またはメール、電話でお気軽にご連絡ください。",
+      title: t('steps.step1.title'),
+      desc: t('steps.step1.desc'),
     },
     {
       id: "02",
-      title: "お見積り",
-      desc: "お客様のご要望を詳細にお聞きした上で、最適なサービスプランとお見積りをご提案します。",
+      title: t('steps.step2.title'),
+      desc: t('steps.step2.desc'),
     },
     {
       id: "03",
-      title: "簡易デモ",
-      desc: "お客様のご要望をもとに、簡易デモ・絵コンテ・ストーリーボードなどの試作を一度制作し、次のステップをご提案します。",
+      title: t('steps.step3.title'),
+      desc: t('steps.step3.desc'),
     },
     {
       id: "04",
-      title: "サービス開始",
-      desc: "専門チームがお客様のプロジェクトを担当し、最高品質のサービスを提供いたします。",
+      title: t('steps.step4.title'),
+      desc: t('steps.step4.desc'),
     },
   ];
 
@@ -32,7 +37,7 @@ export default function ProcessSection() {
         {/* Header */}
         <div className="text-center mb-8 sm:mb-12 md:mb-16 lg:mb-24">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-widest mb-3">
-            導入の流れ
+            {t('title')}
           </h2>
           <div className="w-6 sm:w-8 h-[1px] bg-white mx-auto"></div>
         </div>
@@ -95,7 +100,7 @@ export default function ProcessSection() {
           {/* Left Side: Title with Vertical Separator */}
           <div className="flex items-start gap-6 md:gap-10 ml-20">
             <h3 className="text-white text-base sm:text-lg md:text-xl font-bold tracking-[0.4em] whitespace-nowrap mb-15">
-              主要取引先
+              {t('mainClients')}
             </h3>
             <div className="h-5 md:h-7 w-[1.5px] bg-white mb-15"></div>
           </div>
@@ -125,9 +130,9 @@ export default function ProcessSection() {
 
         {/* CTA Button */}
         <div className="mt-8 sm:mt-12 md:mt-16 lg:mt-24 text-center px-4">
-          <Link href="/contact">
+          <Link href={`/${locale}/contact`} className="w-full sm:w-auto">
             <button className="bg-[#222]  hover:bg-[#333] text-white px-6 sm:px-8 md:px-10 lg:px-16 py-3 sm:py-4 md:py-5 rounded-full text-bold  md:text-sm font-bold tracking-[0.2em] sm:tracking-[0.3em] md:tracking-[0.35em] transition-all inline-flex items-center justify-center w-full sm:w-auto sm:min-w-[260px]">
-              お問い合わせはこちらまで
+              {t('cta')}
             </button>
           </Link>
         </div>

@@ -1,7 +1,9 @@
 "use client";
 import React, { useRef, useState, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 
 export default function ClientsSection() {
+  const t = useTranslations('clients');
   const [activeVideoId, setActiveVideoId] = useState(null);
 
   const videoData = [
@@ -15,7 +17,7 @@ export default function ClientsSection() {
     <section className="pt-10 pb-32 bg-black text-center overflow-hidden">
       <div className="mb-16 px-4">
         <h2 className="text-white text-xl sm:text-2xl md:text-3xl font-bold tracking-tight mb-2">
-          ショートPR広告一覧
+          {t('title')}
         </h2>
         <div className="w-4 h-[2.5px] bg-white mx-auto"></div>
       </div>

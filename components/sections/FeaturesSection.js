@@ -1,7 +1,9 @@
 "use client";
 import React from 'react';
+import { useTranslations } from 'next-intl';
 
 export default function FeaturesSection() {
+  const t = useTranslations('features');
   const gradientStyle = {
     backgroundImage: 'linear-gradient(to bottom right, #3F629D, #2F92B8, #9BB78C, #E5BD58, #F9A142, #F17442, #EA4841)',
     WebkitBackgroundClip: 'text',
@@ -24,22 +26,22 @@ export default function FeaturesSection() {
             style={
               gradientStyle
             }>
-            <span className="block">CRAZY ANGLE</span>
-            <span className="block">PROFESSIONAL</span>
-            <span className="block">QUALITY</span>
+            <span className="block">{t('heading.line1')}</span>
+            <span className="block">{t('heading.line2')}</span>
+            <span className="block">{t('heading.line3')}</span>
           </h2>
         </div>
 
         {/* Right: Japanese Description Text */}
         <div className="w-full md:w-[45%] md:max-w-[550px] pt-4 md:pt-14 relative pr-10">
           <h3 className="text-white text-xl sm:text-2xl md:text-[20.5px] font-bold mb-5 tracking-wider leading-snug ">
-            常識の外から創る、クリエイティブの物語。
+            {t('subtitle')}
           </h3>
 
           <div className="space-y-5 text-[#575757] text-sm md:text-base leading-[1.2] font-[10px]">
-            <p>映像・デザイン・システム開発をワンストップで統合し最大限のマーケティングを。</p>
-            <p>東京・パリ・ムンバイから24時間のグローバル制作体制で、企業の世界観を一貫したストーリーを構築する。</p>
-            <p>単なる再生数ではなく、視聴者をあなたのビジネスへ導く導線設計が、20CENTのSNSマーケティングの本質だ。</p>
+            <p>{t('description.p1')}</p>
+            <p>{t('description.p2')}</p>
+            <p>{t('description.p3')}</p>
           </div>
 
           {/* Bottom-Right Quote */}
