@@ -1,84 +1,112 @@
 "use client";
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 
 export default function ClientsSection() {
-  // Replace these with your actual video and poster paths
+  const [activeVideoId, setActiveVideoId] = useState(null);
+
   const videoData = [
-    { id: 1, src: '/videos/promo1.mp4', poster: '/v3.png' },
-    { id: 2, src: '/videos/promo2.mp4', poster: '/v2.png' },
-    { id: 3, src: '/videos/promo3.mp4', poster: '/v1.png' },
-    { id: 4, src: '/videos/promo4.mp4', poster: '/v4.png' },
+    { id: 1, src: '/bb.mp4', poster: '/v3.png' },
+    { id: 2, src: '/bb.mp4', poster: '/v2.png' },
+    { id: 3, src: '/bb.mp4', poster: '/v1.png' },
+    { id: 4, src: '/bb.mp4', poster: '/v4.png' },
   ];
 
   return (
-    <section className="py-8 sm:py-16 md:py-24 lg:py-32 bg-black text-center">
-      {/* Section Header */}
-      <div className="mb-8 sm:mb-12 md:mb-16 lg:mb-20 px-4">
-        <h2 className="text-white text-xl sm:text-2xl md:text-3xl font-bold tracking-widest mb-3 sm:mb-4">
-          ショートPR 広告 一覧
+    <section className="pt-10 pb-32 bg-black text-center overflow-hidden">
+      <div className="mb-16 px-4">
+        <h2 className="text-white text-xl sm:text-2xl md:text-3xl font-bold tracking-tight mb-2">
+          ショートPR広告一覧
         </h2>
-        <div className="w-8 sm:w-10 h-[2px] bg-white mx-auto"></div>
+        <div className="w-4 h-[2.5px] bg-white mx-auto"></div>
       </div>
 
-      {/* Video Grid */}
-      <div className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 px-4 sm:px-6">
+      {/* Main Container: 
+          Uses a flex layout that allows scaling on mobile so the cards 
+          don't lose their specific 271x589 look.
+      */}
+      <div className="flex flex-wrap justify-center gap-6 md:gap-8 px-4 max-w-full mx-auto">
         {videoData.map((video) => (
-          <VideoCard key={video.id} video={video} />
+          <VideoCard
+            key={video.id}
+            video={video}
+            isActive={activeVideoId === video.id}
+            onPlay={() => setActiveVideoId(video.id)}
+            onStop={() => setActiveVideoId(null)}
+          />
         ))}
       </div>
     </section>
   );
 }
 
-function VideoCard({ video }) {
+function VideoCard({ video, isActive, onPlay, onStop }) {
   const videoRef = useRef(null);
 
-  const handleMouseEnter = () => {
-    // Optional: Auto-play on hover
-    // videoRef.current.play();
-  };
+  useEffect(() => {
+    if (!isActive && videoRef.current) {
+      videoRef.current.pause();
+      videoRef.current.load(); 
+    }
+  }, [isActive]);
 
-  const handleMouseLeave = () => {
-    // Optional: Pause on leave
-    // videoRef.current.pause();
+  const handlePlayClick = (e) => {
+    e.stopPropagation();
+    if (videoRef.current) {
+      if (!isActive) {
+        videoRef.current.play();
+        onPlay();
+      } else {
+        videoRef.current.pause();
+        videoRef.current.load();
+        onStop();
+      }
+    }
   };
 
   return (
-    <div 
-      className="relative group cursor-pointer overflow-hidden rounded-2xl sm:rounded-3xl md:rounded-[40px] shadow-2xl transition-all duration-500 hover:-translate-y-2 w-[180px] h-[390px] sm:w-[220px] sm:h-[480px] md:w-[271px] md:h-[589px]"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+    <div
+      className={`relative group cursor-pointer overflow-hidden transition-all duration-500 
+        
+        w-[220px] h-[478px]       /* Mobile base */
+        xs:w-[240px] xs:h-[522px]  /* Small devices */
+        md:w-[200px] md:h-[489px]  /* Tablet/Desktop: Exact Match */
+        rounded-[32px] md:rounded-[40px] shadow-2xl
+        ${isActive ? 'ring-2 ring-white/50' : ''}`}
+      onClick={handlePlayClick}
     >
-      {/* Actual Video Element */}
       <video
         ref={videoRef}
         src={video.src}
         poster={video.poster}
-        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+        className={`w-full h-full object-cover transition-transform duration-700 ${!isActive ? 'group-hover:scale-105' : ''}`}
         muted
         loop
         playsInline
       />
 
-      {/* Dark Overlay that fades in on hover */}
-      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300" />
+      {!isActive && (
+        <>
+          <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:bg-white/30">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white" className="ml-0.5">
+                <path d="M5 3L19 12L5 21V3Z" />
+              </svg>
+            </div>
+          </div>
+        </>
+      )}
 
-      {/* Play Icon Container */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full bg-white/10 backdrop-blur-xl border border-white/30 flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:bg-white/20">
-          {/* SVG Play Triangle */}
-          <svg 
-            width="18" 
-            height="18" 
-            viewBox="0 0 24 24" 
-            fill="white" 
-            xmlns="http://www.w3.org/2000/svg"
-            className="ml-0.5 sm:ml-1 md:w-6 md:h-6"
-          >
-            <path d="M5 3L19 12L5 21V3Z" />
-          </svg>
+      {isActive && (
+        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-black/20 transition-opacity duration-300 flex items-center justify-center">
+          <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center">
+            <div className="flex gap-1.5">
+              <div className="w-1.5 h-5 bg-white rounded-full"></div>
+              <div className="w-1.5 h-5 bg-white rounded-full"></div>
+            </div>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }

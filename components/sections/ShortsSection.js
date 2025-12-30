@@ -20,37 +20,60 @@ const features = [
   {
     title: "AI × Human の最適分業",
     subtitle: "人間の創造力とAIの生産性を、最高効率で融合。",
-    desc: "企画・演出など創造領域は人が、素材生成やルーチンワークはAIが。品質を維持しながらコストを削減。"
+    desc: "企画・演出など創造領域は人が、素材生成や差分出しなど大量処理はAIが担当。コストを抑えつつ、制作速度と品質の双方を高める。"
   }
 ];
 
 export default function ShortsSection() {
   return (
-    <section className="bg-black py-16 px-4 sm:px-10 overflow-hidden">
+    <section className="bg-black pt-16 pb-6 px-4 sm:px-10 overflow-hidden">
       <div className="max-w-[1558px] mx-auto">
-        
+
         {/* Section Header: Bridge between text and grid */}
-        <div className="flex flex-col items-center mb-20">
-          <h4 className="text-white text-2xl md:text-3xl font-light tracking-[0.3em]">
+        <div className="flex flex-col items-center mb-10">
+          <h4 className="text-white text-2xl md:text-3xl font-bold tracking-[0.3em]">
             特徴
           </h4>
-          <div className="w-16 h-[1px] bg-white mt-4 opacity-40"></div>
+          <div className="w-5 h-[1px] bg-white mt-4 opacity-100"></div>
         </div>
 
         {/* Grid Container */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative">
-          
+
           {/* Central Logo Circle (Hidden on mobile for better flow) */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 hidden lg:block">
-            <div className="w-48 h-48 rounded-full border border-dashed border-zinc-700 flex items-center justify-center bg-black/80 backdrop-blur-sm">
-               <img src="/logo2.png" alt="logo" className="w-20 h-auto opacity-80" />
-            </div>
-          </div>
+  <div className="relative w-64 h-64 flex items-center justify-center">
+    
+    {/* High-Visibility Custom Dashed Circle */}
+    <svg className="absolute inset-0 w-full h-full rotate-[-45deg]">
+      <circle
+        cx="50%"
+        cy="50%"
+        r="48%" 
+        fill="none"
+        stroke="white"
+        strokeWidth="2.5" 
+      
+        strokeDasharray="15 12" 
+        className="opacity-100"
+      />
+    </svg>
 
+    {/* Center Logo Container */}
+    <div className="w-52 h-52 rounded-full flex items-center justify-center bg-black/80 backdrop-blur-sm z-10 shadow-2xl">
+      <img 
+        src="/logo2.png" 
+        alt="logo" 
+        className="w-24 h-auto opacity-90" 
+      />
+    </div>
+    
+  </div>
+</div>
           {features.map((item, index) => (
-            <div 
+            <div
               key={index}
-              className="bg-zinc-900/30 border border-zinc-800/50 p-8 md:p-12 lg:p-16 rounded-2xl transition-all duration-500 hover:bg-zinc-800/50 hover:border-zinc-700 group"
+              className="bg-black/50  p-8 md:p-12 lg:p-16 rounded-2xl transition-all duration-500 hover:bg-black/50 group mt-10"
             >
               <h3 className="text-white text-2xl md:text-3xl font-bold mb-4 tracking-wider group-hover:text-blue-400 transition-colors">
                 {item.title}

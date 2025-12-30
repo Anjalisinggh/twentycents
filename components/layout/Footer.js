@@ -1,40 +1,57 @@
-import { Instagram, Twitter, Video , Youtube } from 'lucide-react'; 
+import { Instagram, Twitter, Youtube } from 'lucide-react'; 
+import { FaTiktok } from 'react-icons/fa';
 
 export default function Footer() {
+  const socialLinks = [
+    { icon: <Instagram size={24} />, href: "https://www.instagram.com/20cent_studio?igsh=Zms2YW1pdHg2dnln&utm_source=qr" },
+    { icon: <Twitter size={24} />, href: "https://x.com/20cent_studio" },
+    { icon: <FaTiktok size={24} />, href: "https://www.tiktok.com/@20cent_studio?_r=1&_t=ZS-92clBY4K5Hr" },
+    { icon: <Youtube size={24} />, href: "https://www.youtube.com/@20CENT_Studio" },
+  ];
+
   return (
-    <footer className="bg-[#111] text-white py-8 sm:py-10 md:py-14 px-4 sm:px-6 md:px-12 lg:px-24 border-t border-white/10">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8 sm:gap-10 md:gap-12">
+    <footer className="bg-[#111] text-white py-12 px-6 md:px-12 lg:px-24 border-t border-white/10">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-10">
         
         {/* Left Section: Socials and Links */}
-        <div className="flex flex-col gap-6 sm:gap-8 md:gap-10 w-full md:w-auto">
+        <div className="flex flex-col gap-8 ml-20">
           {/* Social Icons */}
-          <div className="flex gap-4 sm:gap-5 md:gap-6">
-            <Instagram size={18} className="sm:w-5 sm:h-5 md:w-5 md:h-5 cursor-pointer hover:opacity-70" />
-            <Twitter size={18} className="sm:w-5 sm:h-5 md:w-5 md:h-5 cursor-pointer hover:opacity-70" />
-            <Video size={18} className="sm:w-5 sm:h-5 md:w-5 md:h-5 cursor-pointer hover:opacity-70" /> {/* Using Video for TikTok if needed */}
-            <Youtube size={18} className="sm:w-5 sm:h-5 md:w-5 md:h-5 cursor-pointer hover:opacity-70" />
+          <div className="flex gap-6">
+            {socialLinks.map((social, index) => (
+              <a 
+                key={index} 
+                href={social.href} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="hover:text-gray-400 transition-all duration-300"
+              >
+                {social.icon}
+              </a>
+            ))}
           </div>
 
           {/* Legal Links */}
-          <nav className="flex flex-col gap-3 sm:gap-4 text-[11px] sm:text-xs md:text-[13px] text-gray-400 font-medium">
-            <a href="#" className="hover:text-white transition-colors">会社概要</a>
-            <a href="#" className="hover:text-white transition-colors">プライバシーポリシー</a>
-            <a href="#" className="hover:text-white transition-colors">利用規約</a>
-            <a href="#" className="hover:text-white transition-colors">著作権および免責事項</a>
-            <a href="#" className="hover:text-white transition-colors">特定商取引法に基づく表示</a>
+          <nav className="flex flex-col gap-7 text-xs text-#C3C3C3 font-light">
+            <a href="#" className="hover:text-white transition-colors w-fit">会社概要</a>
+            <a href="#" className="hover:text-white transition-colors w-fit">プライバシーポリシー</a>
+            <a href="#" className="hover:text-white transition-colors w-fit">利用規約</a>
+            <a href="#" className="hover:text-white transition-colors w-fit">著作権および免責事項</a>
+            <a href="#" className="hover:text-white transition-colors w-fit">特定商取引法に基づく表示</a>
           </nav>
         </div>
 
-        {/* Right Section: Brand Logo aligned to the right */}
-        <div className="w-full md:flex-1 flex md:justify-end mt-4 sm:mt-6 md:mt-0">
+        {/* Right Section: Brand Logo */}
+        <div className="w-full md:w-auto flex justify-start md:justify-end">
           <img
             src="/twentylogo.png"
             alt="Twenty Cents."
-            className="h-16 sm:h-18 md:h-20 lg:h-24 w-auto"
+            className="h-20 sm:h-24 md:h-28 w-auto mb-15 mr-20"
           />
         </div>
 
       </div>
+
+      
     </footer>
   );
 }
