@@ -1,37 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 20CENT
+
+A bilingual (Japanese / English) marketing website for **20CENT**, a creative studio that combines video production, design and system development under one roof. Its teams in Tokyo, Paris and Mumbai work round the clock.
+
+## Overview
+
+- **Hero**: "Accelerate your business with integrated creative solutions."
+- **Features**: one-stop production, world-class creators (ex-ILM / DNEG / Weta), a 24-hour follow-the-sun workflow, and an AI × human production model
+- **Short PR ads**: showcase of short-form video work
+- **Service lineup**: Japan-focused and international services
+- **Clients & partners**: creative partners and results
+- **Process**: inquiry → quote → demo → service start
+- **Contact page**: dedicated contact form route
+
+## Features
+
+- **Internationalization** with `next-intl`: `/ja` (default) and `/en` routes, locale middleware and a language toggle
+- Translations kept in `locales/en.json` and `locales/ja.json`
+- Smooth section animations with **Framer Motion**
+- Responsive layout styled with **Tailwind CSS v4**
+
+## Tech Stack
+
+| | |
+|---|---|
+| Framework | Next.js 16 (App Router), React 19 |
+| i18n | next-intl |
+| Styling | Tailwind CSS 4 |
+| Animation | Framer Motion |
+| Icons | lucide-react, react-icons |
+
+## Project Structure
+
+```
+app/
+├── [locale]/            # Localized pages (home, contact)
+components/
+├── layout/              # Footer, LanguageToggle, HtmlLangSetter
+└── sections/            # Hero, Features, Shorts, Services, Clients, Process…
+locales/                 # en.json, ja.json
+middleware.js            # Locale routing
+```
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+git clone https://github.com/Anjalisinggh/twentycents.git
+cd twentycents
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000). It redirects to `/ja`, and `/en` shows the English version.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Author
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# twentycents
+**Anjali Singh**: [GitHub](https://github.com/Anjalisinggh) · [Portfolio](https://anjali.monster) · [LinkedIn](https://www.linkedin.com/in/anjali-singh-82bb42302)
